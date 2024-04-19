@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LineComparsion")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e52dd13b8d4a37632e55894e08f8e70fc5f13734")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5c8bf0967561ca4d94535b17fe047f1e01c9bf9a")]
 [assembly: System.Reflection.AssemblyProductAttribute("LineComparsion")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LineComparsion")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
