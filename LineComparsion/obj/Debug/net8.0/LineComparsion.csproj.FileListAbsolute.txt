@@ -1,0 +1,15 @@
+C:\Users\kirti\Vikrant\CDAC\Bridge Labz\Dotnet\Assignment\LineComparsion\bin\Debug\net8.0\LineComparsion.exe
+C:\Users\kirti\Vikrant\CDAC\Bridge Labz\Dotnet\Assignment\LineComparsion\bin\Debug\net8.0\LineComparsion.deps.json
+C:\Users\kirti\Vikrant\CDAC\Bridge Labz\Dotnet\Assignment\LineComparsion\bin\Debug\net8.0\LineComparsion.runtimeconfig.json
+C:\Users\kirti\Vikrant\CDAC\Bridge Labz\Dotnet\Assignment\LineComparsion\bin\Debug\net8.0\LineComparsion.dll
+C:\Users\kirti\Vikrant\CDAC\Bridge Labz\Dotnet\Assignment\LineComparsion\bin\Debug\net8.0\LineComparsion.pdb
+C:\Users\kirti\Vikrant\CDAC\Bridge Labz\Dotnet\Assignment\LineComparsion\obj\Debug\net8.0\LineComparsion.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kirti\Vikrant\CDAC\Bridge Labz\Dotnet\Assignment\LineComparsion\obj\Debug\net8.0\LineComparsion.AssemblyInfoInputs.cache
+C:\Users\kirti\Vikrant\CDAC\Bridge Labz\Dotnet\Assignment\LineComparsion\obj\Debug\net8.0\LineComparsion.AssemblyInfo.cs
+C:\Users\kirti\Vikrant\CDAC\Bridge Labz\Dotnet\Assignment\LineComparsion\obj\Debug\net8.0\LineComparsion.csproj.CoreCompileInputs.cache
+C:\Users\kirti\Vikrant\CDAC\Bridge Labz\Dotnet\Assignment\LineComparsion\obj\Debug\net8.0\LineComparsion.sourcelink.json
+C:\Users\kirti\Vikrant\CDAC\Bridge Labz\Dotnet\Assignment\LineComparsion\obj\Debug\net8.0\LineComparsion.dll
+C:\Users\kirti\Vikrant\CDAC\Bridge Labz\Dotnet\Assignment\LineComparsion\obj\Debug\net8.0\refint\LineComparsion.dll
+C:\Users\kirti\Vikrant\CDAC\Bridge Labz\Dotnet\Assignment\LineComparsion\obj\Debug\net8.0\LineComparsion.pdb
+C:\Users\kirti\Vikrant\CDAC\Bridge Labz\Dotnet\Assignment\LineComparsion\obj\Debug\net8.0\LineComparsion.genruntimeconfig.cache
+C:\Users\kirti\Vikrant\CDAC\Bridge Labz\Dotnet\Assignment\LineComparsion\obj\Debug\net8.0\ref\LineComparsion.dll
