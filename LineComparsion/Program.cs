@@ -36,6 +36,24 @@ class LineComparison{
         return line1.Equals(line2);       
     }
 
+    public static void LineCompare(double line1, double line2)
+    {
+        int com = line1.CompareTo(line2);
+
+        if(com == -1)
+        {
+            Console.WriteLine("Line1 is smaller than line2");
+        }
+        else if(com == 1)
+        {
+            Console.WriteLine("Line1 is greater than line2");
+        }
+        else
+        {
+            Console.WriteLine("Line1 and line2 are equal");
+        }
+    }
+
     public void Display()
     {
         //Console.WriteLine("Welcome to Line Comparison Computation Program!!!");
@@ -52,21 +70,24 @@ class LineComparison{
         l1.AcceptRecord();
         Console.WriteLine("----------------------------");
         l2.AcceptRecord();
+        Console.WriteLine("----------------------------");
 
         double line1 = l1.LengthCalculator();
         double line2 = l2.LengthCalculator();
 
         //Console.WriteLine(line1 + " " + line2);
 
-        if(LineEquality(line1, line2))
-        {
-            Console.WriteLine("Both Lines are Equal");
-        }
-        else
-        {
-            Console.WriteLine("Both Lines are not Equal");
-        }
-
+        //if(LineEquality(line1, line2))
+        //{
+        //    Console.WriteLine("Both Lines are Equal");
+        //}
+        //else
+        //{
+        //    Console.WriteLine("Both Lines are not Equal");
+        //}
+        
+        Console.WriteLine("Comparsion\n");
+        LineCompare(line1, line2);
 
     }
 }
