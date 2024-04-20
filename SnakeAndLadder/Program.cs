@@ -10,13 +10,15 @@ namespace SnakeLadder
 
         public string? Name { get; set; }
         int initialPos;
+        int currentPos;
 
         Player()
         {
             initialPos = 0;
+            currentPos = initialPos;
         }
 
-        public int RandomDice()
+        public int RollDice()
         {
             Random rnd = new Random();
             int dice = rnd.Next(1, 7);
@@ -24,10 +26,36 @@ namespace SnakeLadder
             return dice;
         }
 
+        public void ChOption(int dice) { 
+            Random rnd = new Random();
+            int option = rnd.Next(1, 4);
+
+            switch (option)
+            {
+                case 1:
+                    Console.WriteLine("No Play\n" + this.currentPos);
+                    break;
+
+                case 2:
+                    Console.WriteLine("Ladder");
+                    currentPos += dice;
+                    Console.WriteLine(this.currentPos);
+                    break;
+
+                case 3:
+                    Console.WriteLine("Snake");
+                    currentPos -= dice; 
+                    Console.WriteLine(this.currentPos);
+                    break;
+            }
+        }
+
         static void Main(string[] args)
         {
             Player player1 = new Player();
-            Console.WriteLine(player1.RandomDice());
+            int dice =  player1.RollDice();
+
+            player1.ChOption(dice);
         }
     }
 }
