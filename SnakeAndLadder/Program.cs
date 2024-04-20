@@ -39,12 +39,20 @@ namespace SnakeLadder
                 case 2:
                     Console.WriteLine("Ladder");
                     currentPos += dice;
+                    if(currentPos > 100)
+                    {
+                        currentPos -= dice;
+                    }
                     Console.WriteLine(this.currentPos);
                     break;
 
                 case 3:
                     Console.WriteLine("Snake");
-                    currentPos -= dice; 
+                    currentPos -= dice;
+                    if (currentPos <= 0)
+                    {
+                        currentPos = 0;
+                    }
                     Console.WriteLine(this.currentPos);
                     break;
             }
@@ -55,7 +63,11 @@ namespace SnakeLadder
             Player player1 = new Player();
             int dice =  player1.RollDice();
 
-            player1.ChOption(dice);
+            while(player1.currentPos < 100) {
+                player1.ChOption(dice);
+            }
+            
+
         }
     }
 }
