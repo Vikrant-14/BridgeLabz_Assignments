@@ -1,0 +1,15 @@
+C:\Users\kirti\Vikrant\CDAC\Bridge Labz\Dotnet\Assignment\SnakeAndLadder\bin\Debug\net8.0\SnakeAndLadder.exe
+C:\Users\kirti\Vikrant\CDAC\Bridge Labz\Dotnet\Assignment\SnakeAndLadder\bin\Debug\net8.0\SnakeAndLadder.deps.json
+C:\Users\kirti\Vikrant\CDAC\Bridge Labz\Dotnet\Assignment\SnakeAndLadder\bin\Debug\net8.0\SnakeAndLadder.runtimeconfig.json
+C:\Users\kirti\Vikrant\CDAC\Bridge Labz\Dotnet\Assignment\SnakeAndLadder\bin\Debug\net8.0\SnakeAndLadder.dll
+C:\Users\kirti\Vikrant\CDAC\Bridge Labz\Dotnet\Assignment\SnakeAndLadder\bin\Debug\net8.0\SnakeAndLadder.pdb
+C:\Users\kirti\Vikrant\CDAC\Bridge Labz\Dotnet\Assignment\SnakeAndLadder\obj\Debug\net8.0\SnakeAndLadder.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kirti\Vikrant\CDAC\Bridge Labz\Dotnet\Assignment\SnakeAndLadder\obj\Debug\net8.0\SnakeAndLadder.AssemblyInfoInputs.cache
+C:\Users\kirti\Vikrant\CDAC\Bridge Labz\Dotnet\Assignment\SnakeAndLadder\obj\Debug\net8.0\SnakeAndLadder.AssemblyInfo.cs
+C:\Users\kirti\Vikrant\CDAC\Bridge Labz\Dotnet\Assignment\SnakeAndLadder\obj\Debug\net8.0\SnakeAndLadder.csproj.CoreCompileInputs.cache
+C:\Users\kirti\Vikrant\CDAC\Bridge Labz\Dotnet\Assignment\SnakeAndLadder\obj\Debug\net8.0\SnakeAndLadder.sourcelink.json
+C:\Users\kirti\Vikrant\CDAC\Bridge Labz\Dotnet\Assignment\SnakeAndLadder\obj\Debug\net8.0\SnakeAndLadder.dll
+C:\Users\kirti\Vikrant\CDAC\Bridge Labz\Dotnet\Assignment\SnakeAndLadder\obj\Debug\net8.0\refint\SnakeAndLadder.dll
+C:\Users\kirti\Vikrant\CDAC\Bridge Labz\Dotnet\Assignment\SnakeAndLadder\obj\Debug\net8.0\SnakeAndLadder.pdb
+C:\Users\kirti\Vikrant\CDAC\Bridge Labz\Dotnet\Assignment\SnakeAndLadder\obj\Debug\net8.0\SnakeAndLadder.genruntimeconfig.cache
+C:\Users\kirti\Vikrant\CDAC\Bridge Labz\Dotnet\Assignment\SnakeAndLadder\obj\Debug\net8.0\ref\SnakeAndLadder.dll
