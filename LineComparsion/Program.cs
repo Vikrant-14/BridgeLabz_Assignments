@@ -31,6 +31,11 @@ class LineComparison{
         return Math.Sqrt(Math.Pow((this.x2 - this.x1),2) + Math.Pow((this.y2 - this.y1),2));
     }
 
+    public static bool LineEquality(double line1, double line2)
+    {
+        return line1.Equals(line2);       
+    }
+
     public void Display()
     {
         //Console.WriteLine("Welcome to Line Comparison Computation Program!!!");
@@ -42,9 +47,26 @@ class LineComparison{
     static void Main()
     {
         LineComparison l1 = new LineComparison();
+        LineComparison l2 = new LineComparison();
+
         l1.AcceptRecord();
-        double line = l1.LengthCalculator();
-        Console.WriteLine("Lenght of Line : " + line);
-      //l1.Display();
+        Console.WriteLine("----------------------------");
+        l2.AcceptRecord();
+
+        double line1 = l1.LengthCalculator();
+        double line2 = l2.LengthCalculator();
+
+        //Console.WriteLine(line1 + " " + line2);
+
+        if(LineEquality(line1, line2))
+        {
+            Console.WriteLine("Both Lines are Equal");
+        }
+        else
+        {
+            Console.WriteLine("Both Lines are not Equal");
+        }
+
+
     }
 }
