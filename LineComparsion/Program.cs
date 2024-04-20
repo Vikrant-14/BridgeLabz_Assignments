@@ -74,17 +74,6 @@ class LineComparison{
 
         double line1 = l1.LengthCalculator();
         double line2 = l2.LengthCalculator();
-
-        //Console.WriteLine(line1 + " " + line2);
-
-        //if(LineEquality(line1, line2))
-        //{
-        //    Console.WriteLine("Both Lines are Equal");
-        //}
-        //else
-        //{
-        //    Console.WriteLine("Both Lines are not Equal");
-        //}
         
         Console.WriteLine("Comparsion\n");
         LineCompare(line1, line2);
