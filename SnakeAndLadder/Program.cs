@@ -11,18 +11,19 @@ namespace SnakeLadder
         public string? Name { get; set; }
         int initialPos;
         int currentPos;
-
+        int count;
         Player()
         {
             initialPos = 0;
             currentPos = initialPos;
+            count = 0;
         }
 
         public int RollDice()
         {
             Random rnd = new Random();
             int dice = rnd.Next(1, 7);
-
+            count++;
             return dice;
         }
 
@@ -43,7 +44,8 @@ namespace SnakeLadder
                     {
                         currentPos -= dice;
                     }
-                    Console.WriteLine(this.currentPos);
+                    Console.WriteLine("Position : " + this.currentPos);
+                    Console.WriteLine("Count : " + this.count);
                     break;
 
                 case 3:
@@ -53,7 +55,9 @@ namespace SnakeLadder
                     {
                         currentPos = 0;
                     }
-                    Console.WriteLine(this.currentPos);
+
+                    Console.WriteLine("Position : " + this.currentPos);
+                    Console.WriteLine("Count : " + this.count);
                     break;
             }
         }
@@ -61,9 +65,10 @@ namespace SnakeLadder
         static void Main(string[] args)
         {
             Player player1 = new Player();
-            int dice =  player1.RollDice();
+            
 
             while(player1.currentPos < 100) {
+                int dice = player1.RollDice();
                 player1.ChOption(dice);
             }
             
