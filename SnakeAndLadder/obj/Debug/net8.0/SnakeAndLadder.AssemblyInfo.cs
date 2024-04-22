@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SnakeAndLadder")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+252cf9a13b90b7af28bb7193038157e147f730fe")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+502a7c1706b025fab5d4786b928961b44de43f48")]
 [assembly: System.Reflection.AssemblyProductAttribute("SnakeAndLadder")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SnakeAndLadder")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
