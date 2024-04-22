@@ -1,106 +1,31 @@
-﻿
+﻿using SnakeAndLadder;
 using System;
+using System.Numerics;
 
-namespace SnakeLadder
-{
-    internal class Player
+namespace SnakeAndLadder {
+    class Game
     {
-        static int startPos = 0;
-        static int endPos = 100;
 
-        public string? Name { get; set; }
-        int initialPos;
-        int currentPos;
-        int dice;
-        int count;
+        static int size;
+        Player[] players;
 
-        Player()
+        Game(int size)
         {
-            initialPos = 0;
-            currentPos = initialPos;
-            count = 0;
+            players = new Player[size];
         }
 
-        Player(string name)
-        {
-            this.Name = name;
-        }
-
-        static Player()
+        static Game()
         {
             Console.WriteLine("====================================");
             Console.WriteLine("Welcome to Snake and Ladder Game!!!");
             Console.WriteLine("====================================");
         }
 
-        public int RollDice()
-        {
-            Random rnd = new Random();
-            this.dice = rnd.Next(1, 7);
-            this.count++;
-            return this.dice;
-        }
-
-        public void ChOption()
-        {
-            Random rnd = new Random();
-            int option = rnd.Next(1, 4);
-
-            switch (option)
-            {
-                case 1:
-                    Console.WriteLine("-----\nNo Play");
-                    Console.WriteLine("Name of Player : " + this.Name);
-                    Console.WriteLine("Position : " + this.currentPos);
-                    Console.WriteLine("Count : " + this.count);
-
-                    break;
-
-                case 2:
-                    Console.WriteLine("-----\nLadder");
-                    currentPos += this.dice;
-
-                    if (currentPos > endPos)
-                    {
-                        currentPos -= dice;
-                    }
-
-                    Console.WriteLine("Name of Player : " + this.Name);
-                    Console.WriteLine("Dice : " + this.dice);
-                    Console.WriteLine("Position : " + this.currentPos);
-                    Console.WriteLine("Count : " + this.count);
-
-                    if (this.currentPos == endPos)
-                    {
-                        return;
-                    }
-
-                    this.RollDice();
-                    this.ChOption();
-
-                    break;
-
-                case 3:
-                    Console.WriteLine("-----\nSnake");
-                    currentPos -= dice;
-                    if (currentPos <= startPos)
-                    {
-                        currentPos = startPos;
-                    }
-
-                    Console.WriteLine("Name of Player : " + this.Name);
-                    Console.WriteLine("Dice : " + this.dice);
-                    Console.WriteLine("Position : " + this.currentPos);
-                    Console.WriteLine("Count : " + this.count);
-
-
-                    break;
-            }
-        }
 
 
         public static int MenuDriven()
         {
+
             int choice = 0;
 
             Console.WriteLine("0. Enter Zero to Exit the Game.");
@@ -110,82 +35,82 @@ namespace SnakeLadder
             {
                 choice = Convert.ToInt32(Console.ReadLine());
             }
-            catch (FormatException)
+            catch (FormatException e)
             {
-                Console.WriteLine("Invalid Input : Enter only numbers");
+                Console.WriteLine("Invalid Input : Enter only number.");
             }
-           
+
 
             return choice;
         }
 
-        public static string AcceptRecord()
-        {
-            Console.WriteLine("Enter player Name : ");
-            string? name = Console.ReadLine();
-            return name;
-        }
-
-        public static void PlayGame(Player player1, Player player2)
-        {
-            while (player1.currentPos < endPos && player2.currentPos < endPos)
-            {
-                player1.dice = player1.RollDice();
-                player1.ChOption();
-
-                if (player1.currentPos == endPos)
-                {
-                    break;
-                }
-
-                player2.dice = player2.RollDice();
-                player2.ChOption();
-
-                if (player2.currentPos == endPos)
-                {
-                    break;
-                }
-
-            }
-
-            if (player1.currentPos == endPos)
-            {
-                Console.WriteLine("\n====================================");
-                Console.WriteLine($"{player1.Name} is Winner!!!");
-                Console.WriteLine("====================================\n");
-            }
-            else if (player2.currentPos == endPos)
-            {
-                Console.WriteLine("\n====================================");
-                Console.WriteLine($"{player2.Name} is Winner!!!");
-                Console.WriteLine("====================================\n");
-            }
-
-
-            Console.WriteLine($"Count of {player1.Name} is at {player1.currentPos} position with {player1.count} times dice rolled");
-            Console.WriteLine($"Count of {player2.Name} is at {player2.currentPos} position with {player2.count} times dice rolled");
-        }
-
         static void Main()
         {
+            Game game;
+
             int choice = 0;
-            while ( ( choice = MenuDriven() ) != 0 )
+
+            while ((choice = MenuDriven()) != 0)
             {
-                switch(choice)
+                switch (choice)
                 {
                     case 0: break;
+                    case 1:
+                        Console.WriteLine("Enter the number of players : ");
 
-                    case 1: 
-                            Player? player1 = new Player( AcceptRecord() );
+                        try 
+                        {
+                            Game.size = Convert.ToInt32(Console.ReadLine());
+                            Console.WriteLine(size);
+                        } 
+                        catch (FormatException e) 
+                        { 
+                            Console.WriteLine(e.ToString()); 
+                        }
+                        
 
-                            Player? player2 = new Player( AcceptRecord() );
-                       
-                            PlayGame( player1, player2 );
+                        if (Game.size == 0) break;
+
+                        game = new Game(Game.size);
+
+                        for (int i = 0; i < size; i++)
+                        {
+                            Console.WriteLine($"Enter the name of Player{i + 1} : ");
+                            game.players[i] = new Player(Console.ReadLine());
+                        }
+
+                        while (true)
+                        {
+                            bool flag = false;
+                            for (int i = 0; i < size; i++)
+                            {
+                                game.players[i].dice = game.players[i].RollDice();
+                                game.players[i].ChOption();
+                                if (game.players[i].currentPos == 100)
+                                { 
+                                    flag = true;
+
+                                    Console.WriteLine("\n====================================");
+                                    Console.WriteLine($"{game.players[i].Name} is Winner!!!");
+                                    Console.WriteLine("====================================\n");
+
+                                    break;
+                                }
+                            }
+
+                            if (flag == true)
+                            {
+                                break;
+                            }
+                        }
+
+
                         break;
                 }
-
-                Console.WriteLine( "\nDo you want to play again?" );
             }
+           
+
         }
+
     }
 }
