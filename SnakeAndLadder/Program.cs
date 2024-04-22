@@ -48,14 +48,15 @@ namespace SnakeLadder
             switch (option)
             {
                 case 1:
-                    Console.WriteLine("No Play");
+                    Console.WriteLine("-----\nNo Play");
                     Console.WriteLine("Name of Player : " + this.Name);
                     Console.WriteLine("Position : " + this.currentPos);
                     Console.WriteLine("Count : " + this.count);
+
                     break;
 
                 case 2:
-                    Console.WriteLine("Ladder");
+                    Console.WriteLine("-----\nLadder");
                     currentPos += this.dice;
                     
                     if(currentPos > endPos)
@@ -64,16 +65,22 @@ namespace SnakeLadder
                     }
 
                     Console.WriteLine("Name of Player : " + this.Name);
+                    Console.WriteLine("Dice : " + this.dice);
                     Console.WriteLine("Position : " + this.currentPos);
                     Console.WriteLine("Count : " + this.count);
+                   
+                    if(this.currentPos == endPos)
+                    {
+                        return;
+                    }
                     
                     this.RollDice();
                     this.ChOption();
-                    
+
                     break;
 
                 case 3:
-                    Console.WriteLine("Snake");
+                    Console.WriteLine("-----\nSnake");
                     currentPos -= dice;
                     if (currentPos <= startPos)
                     {
@@ -81,9 +88,11 @@ namespace SnakeLadder
                     }
 
                     Console.WriteLine("Name of Player : " + this.Name);
+                    Console.WriteLine("Dice : " + this.dice);
                     Console.WriteLine("Position : " + this.currentPos);
                     Console.WriteLine("Count : " + this.count);
 
+                    
                     break;
             }
         }
@@ -97,8 +106,19 @@ namespace SnakeLadder
                 player1.dice = player1.RollDice();
                 player1.ChOption();
 
+                if(player1.currentPos == endPos)
+                {
+                    break;
+                }
+
                 player2.dice = player2.RollDice();
                 player2.ChOption();
+
+                if (player2.currentPos == endPos)
+                {
+                    break;
+                }
+
             }
             
             if(player1.currentPos == endPos)
