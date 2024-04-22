@@ -115,8 +115,8 @@ namespace SnakeLadder
             }
 
 
-            Console.WriteLine($"Count of {player1.Name} is at {player1.currentPos} position with {player1.count}");
-            Console.WriteLine($"Count of {player2.Name} is at {player2.currentPos} position with {player2.count}");
+            Console.WriteLine($"Count of {player1.Name} is at {player1.currentPos} position with {player1.count} times dice rolled");
+            Console.WriteLine($"Count of {player2.Name} is at {player2.currentPos} position with {player2.count} times dice rolled");
         }
     }
 }
