@@ -98,11 +98,36 @@ namespace SnakeLadder
             }
         }
 
-        static void Main(string[] args)
-        {
-            Player player1 = new Player("Player1");
-            Player player2 = new Player("Player2");
 
+        public static int MenuDriven()
+        {
+            int choice = 0;
+
+            Console.WriteLine("0. Enter Zero to Exit the Game.");
+            Console.WriteLine("1. Enter One to Play the Game!!!");
+
+            try
+            {
+                choice = Convert.ToInt32(Console.ReadLine());
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("Invalid Input : Enter only numbers");
+            }
+           
+
+            return choice;
+        }
+
+        public static string AcceptRecord()
+        {
+            Console.WriteLine("Enter player Name : ");
+            string? name = Console.ReadLine();
+            return name;
+        }
+
+        public static void PlayGame(Player player1, Player player2)
+        {
             while (player1.currentPos < endPos && player2.currentPos < endPos)
             {
                 player1.dice = player1.RollDice();
@@ -139,6 +164,28 @@ namespace SnakeLadder
 
             Console.WriteLine($"Count of {player1.Name} is at {player1.currentPos} position with {player1.count} times dice rolled");
             Console.WriteLine($"Count of {player2.Name} is at {player2.currentPos} position with {player2.count} times dice rolled");
+        }
+
+        static void Main()
+        {
+            int choice = 0;
+            while ( ( choice = MenuDriven() ) != 0 )
+            {
+                switch(choice)
+                {
+                    case 0: break;
+
+                    case 1: 
+                            Player? player1 = new Player( AcceptRecord() );
+
+                            Player? player2 = new Player( AcceptRecord() );
+                       
+                            PlayGame( player1, player2 );
+                        break;
+                }
+
+                Console.WriteLine( "\nDo you want to play again?" );
+            }
         }
     }
 }
