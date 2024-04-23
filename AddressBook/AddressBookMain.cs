@@ -16,8 +16,7 @@ namespace Assignment3
 
         public static void Main()
         {
-            Contact contact = new Contact();    
-            Console.WriteLine(contact.FirstName);
+            
         }
     }
 }
