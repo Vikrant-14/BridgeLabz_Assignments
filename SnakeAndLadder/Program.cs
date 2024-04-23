@@ -47,8 +47,11 @@ namespace SnakeAndLadder {
         static void Main()
         {
             Game game;
+            
+            List<Player> list = new List<Player>();
 
             int choice = 0;
+            int len = 0;
 
             while ((choice = MenuDriven()) != 0)
             {
@@ -57,11 +60,11 @@ namespace SnakeAndLadder {
                     case 0: break;
                     case 1:
                         Console.WriteLine("Enter the number of players : ");
+                        
 
                         try 
                         {
-                            Game.size = Convert.ToInt32(Console.ReadLine());
-                            Console.WriteLine(size);
+                            len = Convert.ToInt32(Console.ReadLine());
                         } 
                         catch (FormatException e) 
                         { 
@@ -69,14 +72,16 @@ namespace SnakeAndLadder {
                         }
                         
 
-                        if (Game.size == 0) break;
+                        if (len == 0) break;
 
-                        game = new Game(Game.size);
+                        
+                        //game = new Game(Game.size);
 
-                        for (int i = 0; i < size; i++)
+                        for (int i = 0; i < len; i++)
                         {
                             Console.WriteLine($"Enter the name of Player{i + 1} : ");
-                            game.players[i] = new Player(Console.ReadLine());
+                            list.Add(new Player(Console.ReadLine()));
+                            //game.players[i] = new Player(Console.ReadLine());
                         }
 
                         while (true)
@@ -104,13 +109,9 @@ namespace SnakeAndLadder {
                             }
                         }
 
-
                         break;
                 }
             }
-           
-
         }
-
     }
 }
