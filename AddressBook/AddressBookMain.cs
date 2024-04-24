@@ -125,7 +125,6 @@ namespace Assignment3
             {
                 switch(choice)
                 {
-            
                     case 1: 
                         Console.WriteLine("Add Record\n--------------");
 
