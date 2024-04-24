@@ -20,12 +20,10 @@ namespace Assignment3
 
         public Contact GetContact(int id) { return ContactList[id]; }
 
-        public void UpdateContact() {
+        public void UpdateContact() 
+        {
             Console.WriteLine("Enter Name : ");
             string? name = Console.ReadLine();
-
-            
-
 
             if (this.ContactList.Count() != 0)
             {
@@ -49,9 +47,52 @@ namespace Assignment3
             else
             {
                 Console.WriteLine("List is Empty!!!");
-            }
-            
+            } 
         }
+
+        public void DeleteContact()
+        {
+            if (this.ContactList.Count() != 0)
+            {
+                Console.WriteLine("Enter Name : ");
+                string? name = Console.ReadLine();
+
+                var result = from item in this.ContactList
+                             where item.FirstName.Equals(name)
+                             select item;
+
+                if (result.Any())
+                {
+                    foreach (var i in result)
+                    {
+                        Console.WriteLine("Record Found : " + i.FirstName);
+                        if (this.ContactList.Remove(i))
+                        {
+                            Console.WriteLine("Record Deleted Successfully!!!");
+                            break;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Error!!! While deleting record.!!!");
+                        }
+
+                        if( i == null )
+                        {
+                            break;
+                        }
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("No Record Found!!!");
+                }
+            }
+            else
+            {
+                Console.WriteLine("List is Empty!!!");
+            }
+        }
+
 
         public static int MenuDriven()
         {
@@ -61,6 +102,7 @@ namespace Assignment3
                 Console.WriteLine("1. Enter One to Add Record.");
                 Console.WriteLine("2. Enter Two To Display Record.");
                 Console.WriteLine("3. Update Exisiting Record");
+                Console.WriteLine("4. Delete Record");
                 Console.WriteLine("--------------------------------------");
 
             try
@@ -84,11 +126,12 @@ namespace Assignment3
                 switch(choice)
                 {
             
-                    case 1: Console.WriteLine("Add Record\n--------------");
-             
-                             Contact contact = new();
-                             contact.AcceptContactRecord();
-                             addressBook.ContactList.Add(contact);
+                    case 1: 
+                        Console.WriteLine("Add Record\n--------------");
+
+                        Contact contact = new();
+                        contact.AcceptContactRecord();
+                        addressBook.ContactList.Add(contact);
                         break;
 
                     case 2:
@@ -102,9 +145,15 @@ namespace Assignment3
 
                     case 3:
                         Console.WriteLine("Update Record\n--------------");
+
                         addressBook.UpdateContact();
                         break;
 
+                    case 4:
+                        Console.WriteLine("Delete Record\n--------------");
+
+                        addressBook.DeleteContact();
+                        break;
                 }
             }
         }
