@@ -100,7 +100,7 @@ namespace AddressBook
 
         public static void Main()
         {
-            Program p1 = new Program();
+            Program p1 = new();
             
             int choice = 0;
             int choice1 = 0;
